@@ -51,3 +51,43 @@ The daily average price between 2 cities.
 
 ### Question 2. Examine the Total_price by top20 listing_id at each city and its reservation days.
 #### Answers
+- The average reservation_days in `Seattle` is higher than in `Boston`, considered on the top 20 listing_ids
+
+- The majority of listings is concentrated around 50 - 150 USD in Seattle and about 50-250 $ in Boston
+
+### Question 3. Try to understand if there is anything about the properties that helps you predict price, based on the 2 datasets: boston_listings and seattle_listings.
+#### Analytics
+When forecasting the price of house, we have seen that these feature can be strongly affect to the price are
+
+- Numeric features: 'bathrooms', 'beds', 'square_feet', 'availability_30', 'availability_365', 'availability_60', 'availability_90', 'number_of_reviews', 'accommodates', 'review_scores_rating', review_scores_location' and 'host_listings_count'
+
+- Category features: 'bed_type', 'smart_location', 'property_type', 'room_type' and may be 'neighbourhood_group_cleansed'
+
+Check again which features in the numeric_features can be influenced the prices. To solve this, I will use the heatmap on the correlation matrix.
+
+- In the column bed_type, the value Real_bed has the highest average_price at both cities, while the Airbed is lowest in Boston and Couch is lowest in Seattle.
+
+- In the column room_type, the value Entire home/apt has the highest average_price at both cities, and obviously the shared_room is lowest.
+
+- In the column property_type, the value Guesthouse has the highest average_price in Boston while in Seattle is Boat, the lowest average_price in Boston is Bed & breakfast while Cabin is the lowest in Seattle.
+
+Finally, we apply the Machine Learning models to forecast the average_price based on the features in the listings_dataframes.
+
+- These scores indicated that the model make overfitting, we must remove some features is not related / not correlated the price.
+- Moreover, to find the best r2_score, we can use grid_search CV / hyper-tuning parameters to solve this.
+
+### Question 4. Can you find negative and positive reviews based on text?
+##### Answers.
+- Firstly, viewing each comment line by line is impossible, read my source_code and its output to examine what I meant. We saw that the keywords in the first 10 comments is
+"Perfect", "great", "beautiful", "well", "hola", "pleasant" etc... to describe the positive
+"issue", "terrible", "stupid".... for negative
+- But I want to look over them, so I will use N-grams analytics on the top 100 of uni-grams, bi-grams and tri-grams to solve this!
+>- First is the Uni-gram, from the charts below, we have seen that
+
+>> The words great is appeared almost in the comments_review in both cities;
+
+>> The second and the third popular words is stay and place in both cities
+
+>> But the next 4th popular word is us in Seattle while in Boston was apartment
+
+>> etc.
