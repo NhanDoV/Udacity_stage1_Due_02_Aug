@@ -1,6 +1,6 @@
 ##### Submit links:
-Blog: https://www.kaggle.com/dovannhan/udacity-nhandv6/data
-Github: https://github.com/Nhan121/Udacity_stage1_Due_02_Aug
+- Blog: https://www.kaggle.com/dovannhan/udacity-nhandv6/data
+- Github: https://github.com/Nhan121/Udacity_stage1_Due_02_Aug
 
 # Introduction
 This topic is my practices on the Learning path of Udacity
