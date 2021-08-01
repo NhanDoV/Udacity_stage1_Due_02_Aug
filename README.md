@@ -1,5 +1,5 @@
 ##### Submit links:
-- Blog: https://www.kaggle.com/dovannhan/udacity-nhandv6/notebook
+- Blog: https://www.kaggle.com/dovannhan/udacity-nhandv6
 - Github: https://github.com/Nhan121/Udacity_stage1_Due_02_Aug
 
 # Introduction
