@@ -28,3 +28,26 @@ Name: Do Van Nhan
 Account: NhanDV6
 
 Now, we must import the necessary libraries then load our dataset
+
+# Coding.
+https://github.com/Nhan121/Udacity_stage1_Due_02_Aug/blob/main/udacity-nhandv6_stage1.ipynb
+
+# Conclusion on each question
+### Question 1. Try to understand how much AirBNB homes are earning in certain time frames and areas/ cities.
+#### Answers
+The daily average price between 2 cities.
+- "The average price in Seattle is lower than in Boston", but the total_revenue at Seattle is nearly approximate at in Boston. The second chart show that there are more reservations in Seattle than in Boston.
+- Moreover, loot at the average_price, we have seen that the listing prices raise significantly in summer at Seattle and in autumn at Boston, probably, because of the fact that there are less listings available for reservation. There is also a raise in December at Seattle and in May at Boston. This tells us that summer and winter holidays should be the busiest times to visit Seattle, also autumn to visit Boston.
+- At Boston, Jan2017 - Mar2017 is the time that the average price is lowest
+- At Seattle, Jan2016 - Mar2016 is the time that the average price is lowest
+- 1st quarter is the quarter that the average prices is lowest in both Seattle (125 at Q1-2016 and 136 at Q1-2017) and Boston (181 at Q1-2017).
+- 3rd quarter is the quarter that the average prices is highest in both Seattle (148 at Q3-2016) and Boston (252 at Q1-2017).
+
+>> So which certained time that the time-series attain highest and lowest in each charts?
+
+- The avg_price is lowest in 01, Apr 2016 at Seattle and in 06 Sep 2016 at Boston
+
+- The avg_price is highest in 02, Jan 2017 at Seattle and in 05 Sep 2017 at Boston
+
+### Question 2. Examine the Total_price by top20 listing_id at each city and its reservation days.
+#### Answers
