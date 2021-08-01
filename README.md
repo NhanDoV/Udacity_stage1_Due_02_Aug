@@ -84,10 +84,37 @@ Finally, we apply the Machine Learning models to forecast the average_price base
 - But I want to look over them, so I will use N-grams analytics on the top 100 of uni-grams, bi-grams and tri-grams to solve this!
 >- First is the Uni-gram, from the charts below, we have seen that
 
->> The words great is appeared almost in the comments_review in both cities;
+>>> The words great is appeared almost in the comments_review in both cities;
 
->> The second and the third popular words is stay and place in both cities
+>>> The second and the third popular words is stay and place in both cities
 
->> But the next 4th popular word is us in Seattle while in Boston was apartment
+>>> But the next 4th popular word is us in Seattle while in Boston was apartment
 
->> etc.
+>>> etc.
+
+>- How about the Bi-grams of the comments
+
+>>> Wow, the most 4 popular bi-grams in both cities is the same : definitely stay, highly recommended, walking distance and stay again
+
+>>> Almost the top 75-bigrams reflect the positive comments with the words like: highly recommended, great location, great place, great host, great location, clean well.
+
+==> From this, we can examine easier which words meant positve and negative in the `comments_reviews`.
+
+### Question 5. Make 2 time-series model to forecasting the difference of the reservation_prices between 2 cities.
+Our dataset is in 1 year only, we can make a ARIMA, SARIMA, SARIMAX model or something like this.
+
+But here, in this case, we can use a assumption of Markov properties: the price of present is depended on the avg_price of the previous 3 days or 1 week and I will use another Machine Learning models like Random Forest regressor and Gradient Boosting
+
+- Step 1. Making a rolling-window! Here, I let the `window_size = 3`.
+- Step 2. Making a shifted-datetime
+For a fixed window_size = 3, I will establish a model that based on the 3 previous days for predicting the average_price today, so we must shift the rolling_window by 1 steps! Look at the following output
+- Step 3. Replacing the missing_values by its averages.
+- Step 4. Choosing an algorithm or implement Hypertuning parameters to improve your forecasted_scores.
+
+
+# Summary.
+- I haven't used the Grid-search CV / Hyper tuning parameters to improve the forecasting model in Question 3 and Question 5.
+
+- My solution at question 3 is also not good at all, there is an overfiting problem here!
+
+- The model selection was not optimized since I haven't droped the weak-corelated features in Question 3.
